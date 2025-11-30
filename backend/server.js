@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 require('dotenv').config();
 
 const { initDB } = require('./db');
-const todoRoutes = require('./routes/todos');
+const todoRoutes = require('./routes/todo');
 
 const app = express();
 const PORT = process.env.PORT || 3000;

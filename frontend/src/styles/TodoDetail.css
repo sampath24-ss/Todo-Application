@@ -1,0 +1,129 @@
+.todo-detail-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.todo-detail-card {
+    background-color: var(--bg-primary);
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+}
+
+.todo-detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--bg-secondary);
+}
+
+.status-badge {
+    display: flex;
+    align-items: center;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.todo-detail-content {
+    padding: 2rem;
+}
+
+.todo-detail-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+}
+
+.todo-detail-description {
+    margin-bottom: 2rem;
+}
+
+.todo-detail-description h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+}
+
+.todo-detail-description p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+
+.no-description {
+    font-style: italic;
+    color: var(--text-secondary);
+    padding: 1rem;
+    background-color: var(--bg-secondary);
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.todo-detail-meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background-color: var(--bg-secondary);
+    border-radius: 0.5rem;
+}
+
+.meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.meta-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.meta-value {
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.todo-detail-footer {
+    padding: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    background-color: var(--bg-secondary);
+}
+
+@media (max-width: 768px) {
+    .todo-detail-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .action-buttons {
+        width: 100%;
+    }
+
+    .action-buttons .btn {
+        flex: 1;
+    }
+
+    .todo-detail-title {
+        font-size: 1.5rem;
+    }
+
+    .todo-detail-meta {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
