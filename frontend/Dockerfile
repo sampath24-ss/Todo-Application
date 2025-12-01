@@ -21,4 +21,4 @@ CMD wget --quiet --tries=1 --spider http://localhost:80/ || exit 1
 
 EXPOSE 80
 
-CMD ["nginx" , "-g" , "deamon off;"]
+CMD ["nginx" , "-g" , "daemon off;"]
