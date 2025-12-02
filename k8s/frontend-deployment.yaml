@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: frontend-todo
-        image: 940482423190.dkr.ecr.us-east-1.amazonaws.com/todo-frontend:v1
+        image: 940482423190.dkr.ecr.us-east-1.amazonaws.com/todo-frontend:v2
         ports:
           - containerPort: 80
 ---
@@ -25,12 +25,9 @@ kind: Service
 metadata:
   name: frontend
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: frontend
   ports:
   - port: 80
     targetPort: 80
-    nodePort: 30163
-
-
